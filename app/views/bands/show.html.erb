@@ -1,0 +1,16 @@
+<h1><%= @band.name %></h1>
+
+<a href="https://clipartxtras.com/download/eb554ee83b5c7a5f8b04ea0503b268f3a1b3ff94.html"><img src="https://img.clipartxtras.com/78b4558c9585ffa4f550ddf3270567d0_rock-band-silhouette-clipart-the-cliparts-rock-band-clipart-black-and-white_690-347.jpeg" width="690" alt="rock band clipart black and white" /></a>
+
+<form action="<%= edit_band_url(@band) %>" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="submit" value="EDIT NAME">
+</form>
+
+<form action="<%= band_url(@band) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" value="DELETE BAND">
+</form>
